@@ -1,0 +1,44 @@
+.soc-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+
+  &__item + &__item {
+    margin-left: 10px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #afb1b8;
+
+    transition: color var(--time-transition) cubic-bezier(0.4, 0, 0.2, 1),
+      background-color var(--time-transition) cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.soc-tumb {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // display: flex;
+    margin-left: 70px;
+  }
+}
