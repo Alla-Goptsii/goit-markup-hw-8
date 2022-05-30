@@ -14,12 +14,16 @@
   &--flax {
     @media screen and (min-width: 768px) {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: baseline;
-      padding-left: 76px;
-      padding-right: 89px;
+      // padding-left: 76px;
+      // padding-right: 89px;
       margin-bottom: 60px;
     }
+
+    @media screen and (min-width: 1200px) {
+    }
+
     @media screen and (min-width: 1200px) {
       margin-bottom: 0;
       padding: 0;
