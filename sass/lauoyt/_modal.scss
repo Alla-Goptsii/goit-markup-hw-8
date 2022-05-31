@@ -12,6 +12,11 @@
 
   transition: transform var(--time-transition), opacity var(--time-transition),
     visibility var(--time-transition);
+
+  @media screen and(max-width:767px) {
+    padding: 94px 15px;
+    overflow-y: scroll;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -19,19 +24,33 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transition: transform var(--time-transition);
-  transform: translate(-50%, -50%) scale(1) rotate(0);
-  padding: 40px;
+  position: relative;
+  padding: 15px;
 
-  min-width: 528px;
-  min-height: 581px;
   border-radius: 4px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+
+    width: 450px;
+    padding: 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    // height: 609px;
+    transition: transform var(--time-transition);
+  }
+
+  // @media screen and (min-width: 1200px) {
+  //   width: 528px;
+  //   height: 581px;
+  // }
 
   &-form {
     display: block;
@@ -147,10 +166,25 @@
   margin-bottom: 30px;
 }
 .check-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+  }
 }
 
 .check-text span {
@@ -160,8 +194,6 @@
 }
 
 .checkbox-svg {
-  width: 16px;
-  height: 15px;
   border: 1px solid var(--color-title);
   border-radius: 2px;
   margin-right: 7px;
