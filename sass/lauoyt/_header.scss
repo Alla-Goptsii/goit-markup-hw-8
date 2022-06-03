@@ -17,16 +17,12 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-    margin-left: 88px;
   }
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  @media screen and (min-width: 768px) {
-    margin-right: auto;
-  }
 }
 
 .site-nav__item:not(:last-child) {
@@ -83,6 +79,9 @@
 }
 
 .contact__item:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
   @media screen and (min-width: 1200px) {
     margin-right: 50px;
   }
